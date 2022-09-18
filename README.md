@@ -8,4 +8,3 @@ HSI AMS is intended to be lightweight and flexible  with any database.
 ## Screen Shot
 
 <img src="./dist/img/ScreenShot.png">
-
