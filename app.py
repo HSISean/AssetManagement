@@ -31,7 +31,18 @@ def calendar():
 def jira():
     return  render_template('jira.html')
 
+@app.route('/results')
+def results():
+    return  render_template('enhanced-results.html')
 
+@app.route('/results/mac')
+def mac_result():
+    return  render_template('project-detail.html')
+
+
+@app.route('/results/pc')
+def pc_result():
+    return  render_template('pc-details.html')
 
 if  __name__ == '__main__':
     app.run()
