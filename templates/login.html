@@ -8,26 +8,35 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='all.min.css')}}">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='icheck-bootstrap.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/hsiams.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='hsiams.min.css')}}">
+
+
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css"> -->
+    <!-- icheck bootstrap -->
+    <!-- <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css"> -->
+    <!-- Theme style -->
+    <!-- <link rel="stylesheet" href="../../dist/css/hsiams.min.css"> -->
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-yellow">
     <div class="card-header text-center">
-      <a href="../../index.html" class="h1">
-        <img src="../../dist/img/HSI.png" height="150" width="175">
+      <a href="/" class="h1">
+        <img src="{{ url_for('static', filename='HSI.png') }}" height="150" width="175">
       </a>
-      <p>Global Service Desk Tracker</p>
+      <p>HScottIndustries Asset</p>
+      <p>Management Tracker</p>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="../../index.html" method="post">
+      <form action="/home" method="post">
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
@@ -76,10 +85,13 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='jquery.min.js')}}"></script>
+<!-- <script src="../../plugins/jquery/jquery.min.js"></script> -->
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+<!-- <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 <!-- hsiams App -->
-<script src="../../dist/js/hsiams.min.js"></script>
+<script src="{{ url_for('static', filename='hsiams.min.js')  }}"></script>
+<!-- <script src="../../dist/js/hsiams.min.js"></script> -->
 </body>
 </html>

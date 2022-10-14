@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <title>HSI Node Data | Dashboard</title>
 
-  <!-- test123 -->
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -43,7 +42,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
       </li>
       <!-- <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -52,31 +51,7 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <!-- <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="pages/examples/project-detail.html" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-
-                <button class="btn btn-navbar" href="pages/examples/project-detail.html" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-
-                <button class="btn btn-navbar"  type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li> -->
-
-  
+     
       
     </ul>
   </nav>
@@ -85,7 +60,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.html" class="brand-link">
+    <a href="/" class="brand-link">
       <img src="{{ url_for('static', filename='HSI_yellow.png')}}" alt="AMCLogo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">HSI SD</span>
     </a>
@@ -98,7 +73,7 @@
           <img src="{{ url_for('static', filename='user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="./index.html" class="d-block">Sean Haughton-Scott</a>
+          <a href="/" class="d-block">Sean Haughton-Scott</a>
         </div>
       </div>
 
@@ -112,13 +87,13 @@
        
                     
                <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="/home" class="nav-link active">
                   <i class="nav-icon fas fa-home"></i>
                     <p>Home</p>
                   </a>
                </li>
                <li class="nav-item">
-                <a href="./templates/pages/search/enhanced.html" class="nav-link">
+                <a href="/search" class="nav-link">
                   <i class="nav-icon fas fa-search"></i>
                   <p>
                     Search
@@ -126,7 +101,7 @@
                 </a>
               </li>
                 <li class="nav-item">
-                  <a href="pages/kanban.html" class="nav-link">
+                  <a href="/jira" class="nav-link">
                     <i class="nav-icon fas fa-columns"></i>
                     <p>
                       Jira Board
@@ -134,7 +109,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="pages/calendar.html" class="nav-link">
+                  <a href="/calendar" class="nav-link">
                     <i class="nav-icon far fa-calendar-alt"></i>
                     <p>
                       Calendar
@@ -142,7 +117,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="./templates/pages/examples/login.html" class="nav-link">
+                  <a href="/login" class="nav-link">
                     <!-- <i class="fa-solid fa-arrow-right-from-bracket"></i> -->
                     <i class="nav-icon fas fa-door-open"></i>
                     <p>Log Out</p>
@@ -392,10 +367,10 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2021-2022 <a href="https://hscottindustries.com">HSI</a>.</strong>
+    <strong>Copyright &copy; 2022 <a href="https://hscottindustries.com">HScottIndustries LLC.</a></strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0.0
+      <b>Version</b> 1.0.2
     </div>
   </footer>
 
@@ -428,6 +403,7 @@
 <script src="{{ url_for('static', filename='jquery.knob.min.js')}}"></script>
 <!-- daterangepicker -->
 <script src="{{ url_for('static', filename='moment.min.js')}}"></script>
+
 <script src="{{ url_for('static', filename='daterangepicker.js')}}"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="{{ url_for('static', filename='tempusdominus-bootstrap-4.min.js')}}"></script>
@@ -440,9 +416,9 @@
 
 <script src="{{ url_for('static', filename='Chart.min.js') }}"></script>
 
+<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+
 <script src="{{ url_for('static', filename='dashboard2.js') }}"></script>
 
-<!-- hsiams dashboard demo (This is only for demo purposes) -->
-<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
 </body>
 </html>

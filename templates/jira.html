@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HSI Node Data | Kanban Board</title>
+  <title>HSI Node Data | JIRA Board</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='all.min.css')}}">
   <!-- Ekko Lightbox -->
-  <link rel="stylesheet" href="../plugins/ekko-lightbox/ekko-lightbox.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='ekko-lightbox.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../dist/css/hsiams.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='hsiams.min.css')}}">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='OverlayScrollbars.min.css')}}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="bounceOutUp" src="../dist/img/HSI.png" alt="HSI" height="400" width="400">
+        <img class="bounceOutUp" src="{{ url_for('static', filename='HSI.png')}}" alt="HSI" height="400" width="400">
     </div>
   
   <!-- Navbar -->
@@ -31,7 +31,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../index.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
       </li>
     
     </ul>
@@ -47,8 +47,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../index.html" class="brand-link">
-      <img src="../dist/img/HSI_yellow.png" alt="hsiams Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a href="/" class="brand-link">
+      <img src="{{ url_for('static', filename='/HSI_yellow.png')}}" alt="hsiams Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">HSI SD</span>
     </a>
 
@@ -57,7 +57,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{ url_for('static', filename='user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="../pages/examples/project-detail.html" class="d-block">Sean Haughton-Scott</a>
@@ -72,13 +72,13 @@
        
 
                <li class="nav-item">
-                <a href="../index.html" class="nav-link active">
+                <a href="/" class="nav-link active">
                   <i class="nav-icon fas fa-home"></i>
                     <p>Home</p>
                   </a>
                </li>
                <li class="nav-item">
-                <a href="../pages/search/enhanced.html" class="nav-link">
+                <a href="/search" class="nav-link">
                   <i class="nav-icon fas fa-search"></i>
                   <p>
                     Search
@@ -86,15 +86,15 @@
                 </a>
               </li>
                 <li class="nav-item">
-                  <a href="../pages/kanban.html" class="nav-link">
+                  <a href="/jira" class="nav-link">
                     <i class="nav-icon fas fa-columns"></i>
                     <p>
-                      Kanban Board
+                      Jira Board
                     </p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../pages/calendar.html" class="nav-link">
+                  <a href="/calendar" class="nav-link">
                     <i class="nav-icon far fa-calendar-alt"></i>
                     <p>
                       Calendar
@@ -102,7 +102,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../examples/login.html" class="nav-link">
+                  <a href="/login" class="nav-link">
                     <i class="nav-icon fas fa-door-open"></i>
                     <p>Logut</p>
                   </a>
@@ -120,12 +120,12 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6">
-            <h1>Kanban Board</h1>
+            <h1>Jira Board</h1>
           </div>
           <div class="col-sm-6 d-none d-sm-block">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Kanban Board</li>
+              <li class="breadcrumb-item active">Jira Board</li>
             </ol>
           </div>
         </div>
@@ -302,10 +302,10 @@
 
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2021-2022 <a href="https://hscottindustries.com">HSI</a>.</strong>
+    <strong>Copyright &copy; 2022 <a href="https://hscottindustries.com">HScottIndustries LLC</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0.0
+      <b>Version</b> 1.0.2
     </div>
   </footer>
 
@@ -318,17 +318,17 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../plugins/jquery/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='jquery.min.js')}}"></script>
 <!-- Bootstrap -->
-<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
 <!-- Ekko Lightbox -->
-<script src="../plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="{{ url_for('static', filename='ekko-lightbox.min.js')}}"></script>
 <!-- overlayScrollbars -->
-<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="{{ url_for('static', filename='jquery.overlayScrollbars.min.js')}}"></script>
 <!-- hsiams App -->
-<script src="../dist/js/hsiams.min.js"></script>
+<script src="{{ url_for('static', filename='hsiams.min.js')}}"></script>
 <!-- Filterizr-->
-<script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
+<script src="{{ url_for('static', filename='jquery.filterizr.min.js')}}"></script>
 
 <!-- Page specific script -->
 <script>
