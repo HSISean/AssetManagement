@@ -1,2 +1,1 @@
-web: gunicorn app.wsgi --timeout 50 --log-file -
-release: python manage.py migrate
+web: gunicorn app:app --timeout 50 --log-file -
